@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Login" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-xz-W6P">
+                                <rect key="frame" x="70" y="312" width="274" height="280.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HqH-xU-fEr" customClass="FormTextField" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="tDh-E1-nXX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDL-zH-h5x" customClass="FormTextField" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="81" width="274" height="55"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLt-Eo-b9K" customClass="RoundedUIButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162" width="274" height="55"/>
+                                        <color key="backgroundColor" name="GradientOne"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <fontDescription key="titleFontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onLoginPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0L-vK-2Uz"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgM-Cn-Ncw">
+                                        <rect key="frame" x="0.0" y="243" width="274" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4a-8h-2vF">
+                                                <rect key="frame" x="0.0" y="0.0" width="189" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DsM-Y5-9De">
+                                                <rect key="frame" x="189" y="0.0" width="85" height="37.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="85" id="X5o-Ub-Abi"/>
+                                                </constraints>
+                                                <color key="tintColor" name="PrimaryColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                                    <fontDescription key="titleFontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="onSignUpPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZCa-oi-hU0"/>
+                                                    <segue destination="feb-eK-1Js" kind="presentation" id="hWa-Bz-Fyj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aDL-zH-h5x" firstAttribute="height" secondItem="HqH-xU-fEr" secondAttribute="height" id="nZ2-Iy-zGV"/>
+                                    <constraint firstItem="KLt-Eo-b9K" firstAttribute="height" secondItem="aDL-zH-h5x" secondAttribute="height" id="r2h-K7-T11"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="egL-XX-H83">
+                                <rect key="frame" x="141.5" y="131" width="131" height="131.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="egL-XX-H83" secondAttribute="height" multiplier="1:1" id="edc-hm-1RF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JBE-xz-W6P" firstAttribute="top" secondItem="egL-XX-H83" secondAttribute="bottom" constant="49.5" id="0eC-Tb-2k0"/>
+                            <constraint firstItem="JBE-xz-W6P" firstAttribute="centerX" secondItem="egL-XX-H83" secondAttribute="centerX" id="Bcb-bc-LmO"/>
+                            <constraint firstItem="egL-XX-H83" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fop-CF-AAh"/>
+                            <constraint firstItem="JBE-xz-W6P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.661836" id="Gej-Ye-enj"/>
+                            <constraint firstItem="egL-XX-H83" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.317391" id="hB3-DC-jrM"/>
+                            <constraint firstItem="egL-XX-H83" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="xEK-FU-WuC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailText" destination="HqH-xU-fEr" id="wUY-mw-Dg0"/>
+                        <outlet property="loginButton" destination="KLt-Eo-b9K" id="Owd-Cr-XS7"/>
+                        <outlet property="passwordText" destination="aDL-zH-h5x" id="Pw9-n9-IQQ"/>
+                        <outlet property="signUpButton" destination="DsM-Y5-9De" id="eZy-fR-Fbq"/>
+                        <segue destination="1n8-fH-orI" kind="presentation" identifier="login_to_dashBoard" modalPresentationStyle="fullScreen" id="2ZY-qK-IO7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="DGJ-i9-Cbd">
+            <objects>
+                <viewController id="feb-eK-1Js" customClass="Registration" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2wC-T7-QEK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeC-xu-b5r">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Ia-8dZ">
+                                        <rect key="frame" x="24" y="21.5" width="36" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="onBackPress:" destination="feb-eK-1Js" eventType="touchUpInside" id="g0R-gN-Fqx"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNO-8f-Ki6">
+                                        <rect key="frame" x="159" y="25.5" width="96" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="hNO-8f-Ki6" firstAttribute="centerY" secondItem="xeC-xu-b5r" secondAttribute="centerY" id="0td-Dj-EYS"/>
+                                    <constraint firstItem="hNO-8f-Ki6" firstAttribute="centerX" secondItem="xeC-xu-b5r" secondAttribute="centerX" id="6Mw-V1-ESh"/>
+                                    <constraint firstItem="h3H-Ia-8dZ" firstAttribute="centerY" secondItem="xeC-xu-b5r" secondAttribute="centerY" id="cFp-yx-cWB"/>
+                                    <constraint firstItem="h3H-Ia-8dZ" firstAttribute="leading" secondItem="xeC-xu-b5r" secondAttribute="leading" constant="24" id="hz4-Ih-fVq"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="mp7-Rl-TR7">
+                                <rect key="frame" x="41.5" y="110" width="331" height="298"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-SQ-9T3" customClass="FormTextField" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="hpO-1L-wH9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXt-4O-U1S" customClass="FormTextField" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="81" width="331" height="55"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40k-cZ-clF" customClass="FormTextField" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="162" width="331" height="55"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="PrimaryColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhZ-eW-ZSg" customClass="RoundedUIButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243" width="331" height="55"/>
+                                        <color key="backgroundColor" name="GradientOne"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Register">
+                                            <fontDescription key="titleFontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onLoginPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIs-am-trg"/>
+                                            <action selector="registerClick:" destination="feb-eK-1Js" eventType="touchUpInside" id="cVl-Z0-C4k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hhZ-eW-ZSg" firstAttribute="height" secondItem="L5n-SQ-9T3" secondAttribute="height" id="1Mq-dn-42P"/>
+                                    <constraint firstItem="mXt-4O-U1S" firstAttribute="height" secondItem="L5n-SQ-9T3" secondAttribute="height" id="A9h-RO-c1s"/>
+                                    <constraint firstItem="40k-cZ-clF" firstAttribute="height" secondItem="L5n-SQ-9T3" secondAttribute="height" id="n3L-6l-0yb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WLL-KP-5Jm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mp7-Rl-TR7" firstAttribute="width" secondItem="2wC-T7-QEK" secondAttribute="width" multiplier="0.8" id="FXg-3c-17B"/>
+                            <constraint firstItem="mp7-Rl-TR7" firstAttribute="top" secondItem="xeC-xu-b5r" secondAttribute="bottom" constant="36" id="RYc-sW-G7H"/>
+                            <constraint firstItem="xeC-xu-b5r" firstAttribute="leading" secondItem="WLL-KP-5Jm" secondAttribute="leading" id="Yfx-b0-0eO"/>
+                            <constraint firstItem="xeC-xu-b5r" firstAttribute="top" secondItem="WLL-KP-5Jm" secondAttribute="top" id="bib-mI-Kjf"/>
+                            <constraint firstItem="xeC-xu-b5r" firstAttribute="height" secondItem="2wC-T7-QEK" secondAttribute="height" multiplier="0.0881696" id="f9J-GZ-RvY"/>
+                            <constraint firstItem="mp7-Rl-TR7" firstAttribute="centerX" secondItem="2wC-T7-QEK" secondAttribute="centerX" id="pX3-5a-TY6"/>
+                            <constraint firstItem="xeC-xu-b5r" firstAttribute="trailing" secondItem="WLL-KP-5Jm" secondAttribute="trailing" id="xLj-f9-oke"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="h3H-Ia-8dZ" id="INO-qf-VKU"/>
+                        <outlet property="emailText" destination="L5n-SQ-9T3" id="QpP-a7-0fP"/>
+                        <outlet property="passwordText" destination="40k-cZ-clF" id="x49-bB-xjj"/>
+                        <outlet property="userNameText" destination="mXt-4O-U1S" id="nYg-KF-86v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hTD-fy-V69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728.98550724637687" y="85.714285714285708"/>
+        </scene>
+        <!--DashBoard-->
+        <scene sceneID="Rfj-Pe-G8F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DashBoard" referencedIdentifier="DashBoard" id="1n8-fH-orI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Epl-WW-FbB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJp-4f-Hdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="524"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="40k-cZ-clF">
+            <size key="intrinsicContentSize" width="62.5" height="20"/>
+        </designable>
+        <designable name="HqH-xU-fEr">
+            <size key="intrinsicContentSize" width="70" height="21"/>
+        </designable>
+        <designable name="KLt-Eo-b9K">
+            <size key="intrinsicContentSize" width="62" height="34.5"/>
+        </designable>
+        <designable name="L5n-SQ-9T3">
+            <size key="intrinsicContentSize" width="34" height="21"/>
+        </designable>
+        <designable name="aDL-zH-h5x">
+            <size key="intrinsicContentSize" width="62.5" height="20"/>
+        </designable>
+        <designable name="hhZ-eW-ZSg">
+            <size key="intrinsicContentSize" width="81" height="34.5"/>
+        </designable>
+        <designable name="mXt-4O-U1S">
+            <size key="intrinsicContentSize" width="70" height="21"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="logo" width="90" height="90"/>
+        <namedColor name="GradientOne">
+            <color red="1" green="0.22745098039215686" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.92199999094009399" green="0.30199998617172241" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

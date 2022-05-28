@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dash Board Tab Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DashBoard" id="Y6W-OH-hqX" customClass="DashBoardTabController" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DashBoard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwu-d1-tPk">
+                                <rect key="frame" x="165" y="438" width="84.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-H2-FtW" userLabel="tabBar" customClass="RoundedTabBarView" customModule="NewsEyePax" customModuleProvider="target">
+                                <rect key="frame" x="20" y="732" width="374" height="82"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vm1-El-T8l">
+                                        <rect key="frame" x="14" y="14" width="346" height="54"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUJ-I4-Q5x">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="54"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="HomeUnSelect"/>
+                                                <connections>
+                                                    <action selector="tabChangedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="T48-tj-zE1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoW-NL-Lpf">
+                                                <rect key="frame" x="142" y="0.0" width="60" height="54"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="FavoriteUnSelect"/>
+                                                <connections>
+                                                    <action selector="tabChangedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ABx-Zf-IWP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N2-ei-tjd">
+                                                <rect key="frame" x="293" y="0.0" width="53" height="54"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="ProfileUnSelect"/>
+                                                <connections>
+                                                    <action selector="tabChangedWithSender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Om7-QC-QoA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Vm1-El-T8l" secondAttribute="trailing" constant="14" id="12f-w0-8bl"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vm1-El-T8l" secondAttribute="bottom" constant="14" id="AjH-HE-ssA"/>
+                                    <constraint firstAttribute="width" secondItem="Glv-H2-FtW" secondAttribute="height" multiplier="187:41" id="CbP-d1-O9U"/>
+                                    <constraint firstItem="Vm1-El-T8l" firstAttribute="leading" secondItem="Glv-H2-FtW" secondAttribute="leading" constant="14" id="SjZ-vN-a1T"/>
+                                    <constraint firstItem="Vm1-El-T8l" firstAttribute="top" secondItem="Glv-H2-FtW" secondAttribute="top" constant="14" id="b3L-Rw-g2k"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="GradientTwo"/>
+                        <constraints>
+                            <constraint firstItem="pwu-d1-tPk" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="5wt-m2-q0Y"/>
+                            <constraint firstItem="pwu-d1-tPk" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="G5s-IZ-2ku"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Glv-H2-FtW" secondAttribute="bottom" constant="48" id="Li9-fW-bqA"/>
+                            <constraint firstItem="Glv-H2-FtW" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.903382" id="bqI-GR-hKI"/>
+                            <constraint firstItem="Glv-H2-FtW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="oYN-Fc-f2a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabBarView" destination="Glv-H2-FtW" id="aAO-dI-h09"/>
+                        <outletCollection property="tabButtons" destination="yUJ-I4-Q5x" collectionClass="NSMutableArray" id="9QT-LY-HCq"/>
+                        <outletCollection property="tabButtons" destination="HoW-NL-Lpf" collectionClass="NSMutableArray" id="VOR-RU-6kJ"/>
+                        <outletCollection property="tabButtons" destination="7N2-ei-tjd" collectionClass="NSMutableArray" id="Mea-D1-rAU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="-218"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="rpk-CB-XbW">
+            <objects>
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gwf-fd-MPl" customClass="Home" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lsi-7Z-I8a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW6-un-Qxc">
+                                <rect key="frame" x="184.5" y="437.5" width="45.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GXv-uf-Zcp"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="tW6-un-Qxc" firstAttribute="centerY" secondItem="lsi-7Z-I8a" secondAttribute="centerY" id="LYc-GI-5Fe"/>
+                            <constraint firstItem="tW6-un-Qxc" firstAttribute="centerX" secondItem="lsi-7Z-I8a" secondAttribute="centerX" id="mh9-XH-moh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vp1-fZ-lkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="459"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="Zlo-fi-fpj">
+            <objects>
+                <viewController storyboardIdentifier="Favorite" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0tR-JD-J6U" customClass="Favorite" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Du-6V-I3P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-Fs-gHx">
+                                <rect key="frame" x="177" y="437.5" width="60.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Tf-3q-iRh"/>
+                        <color key="backgroundColor" name="Secondary"/>
+                        <constraints>
+                            <constraint firstItem="tBz-Fs-gHx" firstAttribute="centerY" secondItem="2Du-6V-I3P" secondAttribute="centerY" id="bth-5t-Maq"/>
+                            <constraint firstItem="tBz-Fs-gHx" firstAttribute="centerX" secondItem="2Du-6V-I3P" secondAttribute="centerX" id="tw6-NX-wRw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6o-OB-t0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="649" y="459"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="5tL-7q-MWM">
+            <objects>
+                <viewController storyboardIdentifier="Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iwg-6G-ngm" customClass="Profile" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fsj-U7-9NA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJE-pi-W7R">
+                                <rect key="frame" x="183" y="437.5" width="48.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Xo-xW-1Yx"/>
+                        <color key="backgroundColor" name="Tertiary"/>
+                        <constraints>
+                            <constraint firstItem="EJE-pi-W7R" firstAttribute="centerY" secondItem="Fsj-U7-9NA" secondAttribute="centerY" id="ax5-Fd-tul"/>
+                            <constraint firstItem="EJE-pi-W7R" firstAttribute="centerX" secondItem="Fsj-U7-9NA" secondAttribute="centerX" id="kAy-yx-Nnc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zZ-Hk-ve6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="459"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FavoriteUnSelect" width="36" height="42"/>
+        <image name="HomeUnSelect" width="27" height="42"/>
+        <image name="ProfileUnSelect" width="29" height="42"/>
+        <namedColor name="GradientTwo">
+            <color red="1" green="0.50196078431372548" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.92199999094009399" green="0.30199998617172241" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tertiary">
+            <color red="1" green="0.90196078431372551" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
