@@ -245,13 +245,13 @@
 		7D9754C02841E5010087D210 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7D9755BA28441E570087D210 /* TextField */,
 				7D97556528435D3A0087D210 /* RoundedImageView */,
 				7D97555C284347B70087D210 /* CategoryView */,
 				7D975550284325100087D210 /* SearchBar */,
 				7D975547284285110087D210 /* RoundedTabBar */,
 				7D9754CE2841EBBA0087D210 /* RoundedButtonX */,
 				7D9754C82841E8590087D210 /* View */,
-				7D9754C12841E5310087D210 /* TextFormField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -540,6 +540,14 @@
 				7D9755B6284413100087D210 /* SplashScreen.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		7D9755BA28441E570087D210 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				7D9754C12841E5310087D210 /* TextFormField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		97CB9CD76BB81FDAE4BF18C4 /* Pods */ = {
