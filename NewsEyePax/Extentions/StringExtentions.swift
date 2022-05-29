@@ -13,4 +13,9 @@ extension String{
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }
+    func asDate(format: DateFormat) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format.rawValue
+        return dateFormatter.date(from: self)
+    }
 }

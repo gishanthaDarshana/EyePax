@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D8N-iT-bYw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -291,6 +291,34 @@
             </objects>
             <point key="canvasLocation" x="20" y="524"/>
         </scene>
+        <!--Splash Screen-->
+        <scene sceneID="fV1-Mt-mUg">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="D8N-iT-bYw" customClass="SplashScreen" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jya-hu-2rw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="80T-VO-1Hc">
+                                <rect key="frame" x="162" y="403" width="90" height="90"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QMs-ed-IAq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="80T-VO-1Hc" firstAttribute="centerX" secondItem="Jya-hu-2rw" secondAttribute="centerX" id="U8d-jJ-nXk"/>
+                            <constraint firstItem="80T-VO-1Hc" firstAttribute="centerY" secondItem="Jya-hu-2rw" secondAttribute="centerY" id="eJZ-z6-ntS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="X4f-BQ-uq8"/>
+                        <segue destination="1n8-fH-orI" kind="presentation" identifier="dashBoard" modalPresentationStyle="fullScreen" id="hfF-Ee-BAA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oat-j5-PG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="86"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="40k-cZ-clF">
@@ -315,6 +343,9 @@
             <size key="intrinsicContentSize" width="70" height="21"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="hfF-Ee-BAA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="logo" width="90" height="90"/>

@@ -42,6 +42,7 @@ class DashBoardTabController: UIViewController {
         selectedIndex = sender.tag
                 
         tabButtons[previousIndex].isSelected = false
+        tabButtons[previousIndex].tintColor = UIColor(named: "UnSelectColor")
         let previousVC = viewControllers[previousIndex]
                 
         previousVC.willMove(toParent: nil)
@@ -49,7 +50,7 @@ class DashBoardTabController: UIViewController {
         previousVC.removeFromParent()
                 
         sender.isSelected = true
-                
+        sender.tintColor  = UIColor(named: "PrimaryColor")
         let vc = viewControllers[selectedIndex]
         vc.view.frame = UIApplication.shared.windows[0].frame
         vc.didMove(toParent: self)

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="93" id="KGk-i7-Jjw" customClass="NewsCell" customModule="NewsEyePax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 34" translatesAutoresizingMaskIntoConstraints="NO" id="zeb-pC-VKV" customClass="RoundedImageView" customModule="NewsEyePax" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToF-ON-RjW">
+                        <rect key="frame" x="15" y="9" width="290" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="He1-cF-ydP">
+                        <rect key="frame" x="276" y="66.5" width="29" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUb-Lg-bxt">
+                        <rect key="frame" x="15" y="66.5" width="29" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="He1-cF-ydP" firstAttribute="bottom" secondItem="zeb-pC-VKV" secondAttribute="bottom" id="1zA-Lo-LEy"/>
+                    <constraint firstItem="eUb-Lg-bxt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="2Fy-Lp-8pR"/>
+                    <constraint firstItem="ToF-ON-RjW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="P0d-5O-OjR"/>
+                    <constraint firstItem="zeb-pC-VKV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UYF-Mx-T2M"/>
+                    <constraint firstItem="ToF-ON-RjW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="WAY-F6-inc"/>
+                    <constraint firstAttribute="trailing" secondItem="He1-cF-ydP" secondAttribute="trailing" constant="15" id="aDk-pr-CI1"/>
+                    <constraint firstAttribute="bottom" secondItem="zeb-pC-VKV" secondAttribute="bottom" constant="10" id="aHe-SA-fz0"/>
+                    <constraint firstAttribute="trailing" secondItem="ToF-ON-RjW" secondAttribute="trailing" constant="15" id="adU-t9-Z6N"/>
+                    <constraint firstAttribute="trailing" secondItem="zeb-pC-VKV" secondAttribute="trailing" id="dFg-ea-LPi"/>
+                    <constraint firstItem="zeb-pC-VKV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="eB7-bX-adq"/>
+                    <constraint firstItem="eUb-Lg-bxt" firstAttribute="bottom" secondItem="zeb-pC-VKV" secondAttribute="bottom" id="hwL-VZ-gZe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="auther" destination="eUb-Lg-bxt" id="el8-TY-hCd"/>
+                <outlet property="newsImage" destination="zeb-pC-VKV" id="QqV-G8-yiW"/>
+                <outlet property="newsTitle" destination="ToF-ON-RjW" id="kET-pf-zz5"/>
+                <outlet property="publishedDate" destination="He1-cF-ydP" id="x23-6f-VJX"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="77.34375"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="zeb-pC-VKV">
+            <size key="intrinsicContentSize" width="321" height="240"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Frame 34" width="321" height="240"/>
+    </resources>
+</document>

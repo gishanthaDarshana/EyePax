@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LatestNewsCell" id="gTV-IL-0wX" customClass="LatestNewsCell" customModule="NewsEyePax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="286" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="144"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 34" translatesAutoresizingMaskIntoConstraints="NO" id="WUl-5w-4WN" customClass="RoundedImageView" customModule="NewsEyePax" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="286" height="144"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;some text here&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26U-4O-r1P">
+                        <rect key="frame" x="20" y="117.5" width="246" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Head Line Here " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTL-2X-zsQ">
+                        <rect key="frame" x="20" y="58.5" width="246" height="27.5"/>
+                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Ryan brows" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8w-YJ-1z6">
+                        <rect key="frame" x="20" y="39" width="246" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="26U-4O-r1P" firstAttribute="leading" secondItem="uTL-2X-zsQ" secondAttribute="leading" id="2jd-5B-0I9"/>
+                <constraint firstItem="WUl-5w-4WN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8Sq-jL-1ZI"/>
+                <constraint firstAttribute="trailing" secondItem="WUl-5w-4WN" secondAttribute="trailing" id="9Qs-ER-q83"/>
+                <constraint firstAttribute="trailing" secondItem="uTL-2X-zsQ" secondAttribute="trailing" constant="20" id="Gcy-Ss-zep"/>
+                <constraint firstItem="uTL-2X-zsQ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Ini-4W-bAN"/>
+                <constraint firstItem="WUl-5w-4WN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OIo-Wv-CYO"/>
+                <constraint firstItem="C8w-YJ-1z6" firstAttribute="trailing" secondItem="uTL-2X-zsQ" secondAttribute="trailing" id="Pey-un-tSA"/>
+                <constraint firstAttribute="bottom" secondItem="WUl-5w-4WN" secondAttribute="bottom" id="QzG-Cx-eOK"/>
+                <constraint firstItem="uTL-2X-zsQ" firstAttribute="top" secondItem="C8w-YJ-1z6" secondAttribute="bottom" id="Yut-lv-wml"/>
+                <constraint firstAttribute="bottom" secondItem="26U-4O-r1P" secondAttribute="bottom" constant="10" id="fU3-M7-cVW"/>
+                <constraint firstItem="uTL-2X-zsQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="flY-be-W7m"/>
+                <constraint firstItem="C8w-YJ-1z6" firstAttribute="leading" secondItem="uTL-2X-zsQ" secondAttribute="leading" id="flz-u9-E0l"/>
+                <constraint firstItem="26U-4O-r1P" firstAttribute="trailing" secondItem="uTL-2X-zsQ" secondAttribute="trailing" id="pYC-KJ-2UJ"/>
+            </constraints>
+            <size key="customSize" width="286" height="144"/>
+            <connections>
+                <outlet property="auther" destination="C8w-YJ-1z6" id="2W3-SU-xA6"/>
+                <outlet property="headLineNme" destination="uTL-2X-zsQ" id="Cly-9F-ZOd"/>
+                <outlet property="newsImage" destination="WUl-5w-4WN" id="CQ5-cJ-uGf"/>
+                <outlet property="partOfTheNews" destination="26U-4O-r1P" id="3ka-YH-WGX"/>
+            </connections>
+            <point key="canvasLocation" x="302.89855072463769" y="62.276785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="WUl-5w-4WN">
+            <size key="intrinsicContentSize" width="321" height="240"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Frame 34" width="321" height="240"/>
+    </resources>
+</document>

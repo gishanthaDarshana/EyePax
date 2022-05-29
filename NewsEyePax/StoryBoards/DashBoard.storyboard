@@ -3,11 +3,21 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Dash Board Tab Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -31,6 +41,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUJ-I4-Q5x">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="54"/>
+                                                <color key="tintColor" name="UnSelectColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="HomeUnSelect"/>
                                                 <connections>
@@ -39,6 +50,7 @@
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoW-NL-Lpf">
                                                 <rect key="frame" x="142" y="0.0" width="60" height="54"/>
+                                                <color key="tintColor" name="UnSelectColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="FavoriteUnSelect"/>
                                                 <connections>
@@ -47,6 +59,7 @@
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N2-ei-tjd">
                                                 <rect key="frame" x="293" y="0.0" width="53" height="54"/>
+                                                <color key="tintColor" name="UnSelectColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="ProfileUnSelect"/>
                                                 <connections>
@@ -88,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="648" y="-218"/>
+            <point key="canvasLocation" x="-996" y="901"/>
         </scene>
         <!--Home-->
         <scene sceneID="rpk-CB-XbW">
@@ -98,24 +111,165 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW6-un-Qxc">
-                                <rect key="frame" x="184.5" y="437.5" width="45.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="HWs-jr-ejz">
+                                <rect key="frame" x="20.5" y="79" width="373" height="46"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g3V-7A-Pqf" customClass="NewsSearchBar" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="46"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                                                <imageReference key="value" image="magnifyingglass" catalog="system" symbolScale="medium"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zON-qX-NjJ">
+                                        <rect key="frame" x="316" y="0.0" width="57" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="deG-XJ-4VE"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="NotificationIcon" imagePadding="0.0">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            </preferredSymbolConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickOnNotification:" destination="gwf-fd-MPl" eventType="touchUpInside" id="mqh-5g-puL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bVl-As-Ycb">
+                                <rect key="frame" x="20.5" y="140" width="373" height="37.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76g-mC-Jn8">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qas-t4-AHu">
+                                        <rect key="frame" x="267.5" y="0.0" width="105.5" height="37.5"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.forward" catalog="system" title="See All  ">
+                                            <fontDescription key="titleFontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="seeAll:" destination="gwf-fd-MPl" eventType="touchUpInside" id="Qz8-DI-VC6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-52-h1K">
+                                <rect key="frame" x="20.5" y="192.5" width="373" height="170"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uZU-52-h1K" secondAttribute="height" multiplier="438:200" id="S05-6f-R0h"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SBM-Sz-5JK">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lud-eN-Sc4">
+                                        <rect key="frame" x="0.0" y="21" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0cv-fv-DR7">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="gwf-fd-MPl" id="JgE-0M-uHP"/>
+                                    <outlet property="delegate" destination="gwf-fd-MPl" id="E3c-A7-Oom"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-5o-trr">
+                                <rect key="frame" x="20.5" y="377.5" width="373" height="42.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MFJ-5o-trr" secondAttribute="height" multiplier="467:53" id="oYo-4f-cet"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ibQ-Z7-Wad">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Kpx-5G-JKx">
+                                        <rect key="frame" x="0.0" y="-43" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9EF-vz-D4o">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aZj-uh-6df">
+                                <rect key="frame" x="20.5" y="435" width="373" height="427"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gwf-fd-MPl" id="Ohf-DV-LZS"/>
+                                    <outlet property="delegate" destination="gwf-fd-MPl" id="0aZ-Xq-0cn"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GXv-uf-Zcp"/>
-                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tW6-un-Qxc" firstAttribute="centerY" secondItem="lsi-7Z-I8a" secondAttribute="centerY" id="LYc-GI-5Fe"/>
-                            <constraint firstItem="tW6-un-Qxc" firstAttribute="centerX" secondItem="lsi-7Z-I8a" secondAttribute="centerX" id="mh9-XH-moh"/>
+                            <constraint firstItem="bVl-As-Ycb" firstAttribute="leading" secondItem="HWs-jr-ejz" secondAttribute="leading" id="1di-HV-o1V"/>
+                            <constraint firstItem="bVl-As-Ycb" firstAttribute="top" secondItem="HWs-jr-ejz" secondAttribute="bottom" constant="15" id="4DC-Zq-8nn"/>
+                            <constraint firstItem="MFJ-5o-trr" firstAttribute="trailing" secondItem="uZU-52-h1K" secondAttribute="trailing" id="5bb-1E-gNI"/>
+                            <constraint firstItem="aZj-uh-6df" firstAttribute="bottom" secondItem="GXv-uf-Zcp" secondAttribute="bottom" id="91o-ID-Blh"/>
+                            <constraint firstItem="HWs-jr-ejz" firstAttribute="width" secondItem="lsi-7Z-I8a" secondAttribute="width" multiplier="0.9" id="A8L-zG-Pwu"/>
+                            <constraint firstItem="bVl-As-Ycb" firstAttribute="trailing" secondItem="HWs-jr-ejz" secondAttribute="trailing" id="FQC-zE-NJt"/>
+                            <constraint firstItem="uZU-52-h1K" firstAttribute="width" secondItem="bVl-As-Ycb" secondAttribute="width" id="Gan-Z3-4Dv"/>
+                            <constraint firstItem="uZU-52-h1K" firstAttribute="top" secondItem="bVl-As-Ycb" secondAttribute="bottom" constant="15" id="H2w-bH-NH0"/>
+                            <constraint firstItem="uZU-52-h1K" firstAttribute="trailing" secondItem="bVl-As-Ycb" secondAttribute="trailing" id="LwR-pE-nJe"/>
+                            <constraint firstItem="bVl-As-Ycb" firstAttribute="width" secondItem="HWs-jr-ejz" secondAttribute="width" id="M2T-7j-AWn"/>
+                            <constraint firstItem="uZU-52-h1K" firstAttribute="leading" secondItem="bVl-As-Ycb" secondAttribute="leading" id="Opv-sS-ORx"/>
+                            <constraint firstItem="aZj-uh-6df" firstAttribute="trailing" secondItem="MFJ-5o-trr" secondAttribute="trailing" id="Ts6-op-trB"/>
+                            <constraint firstItem="HWs-jr-ejz" firstAttribute="top" secondItem="GXv-uf-Zcp" secondAttribute="top" constant="35" id="Yk3-vp-h3K"/>
+                            <constraint firstItem="aZj-uh-6df" firstAttribute="leading" secondItem="MFJ-5o-trr" secondAttribute="leading" id="cjV-eL-nOn"/>
+                            <constraint firstItem="aZj-uh-6df" firstAttribute="top" secondItem="MFJ-5o-trr" secondAttribute="bottom" constant="15" id="eI1-eL-MR6"/>
+                            <constraint firstItem="HWs-jr-ejz" firstAttribute="centerX" secondItem="lsi-7Z-I8a" secondAttribute="centerX" id="hea-CN-2pp"/>
+                            <constraint firstItem="MFJ-5o-trr" firstAttribute="top" secondItem="uZU-52-h1K" secondAttribute="bottom" constant="15" id="jgr-Ss-UPh"/>
+                            <constraint firstItem="MFJ-5o-trr" firstAttribute="leading" secondItem="uZU-52-h1K" secondAttribute="leading" id="kgo-hC-c8q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryCollection" destination="MFJ-5o-trr" id="x1r-gw-d4s"/>
+                        <outlet property="latestNewsCollection" destination="uZU-52-h1K" id="MxI-2G-5mC"/>
+                        <outlet property="newsTable" destination="aZj-uh-6df" id="oqa-p8-0Rp"/>
+                        <outlet property="searchBar" destination="g3V-7A-Pqf" id="hXl-li-tIy"/>
+                        <segue destination="B4d-Gg-lo1" kind="presentation" identifier="newsList" id="9LF-LA-EeB"/>
+                        <segue destination="Fnw-jt-Fhi" kind="presentation" identifier="newsDetail" modalPresentationStyle="fullScreen" id="1XU-vx-rFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vp1-fZ-lkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="459"/>
+            <point key="canvasLocation" x="-162.31884057971016" y="458.70535714285711"/>
         </scene>
         <!--Favorite-->
         <scene sceneID="Zlo-fi-fpj">
@@ -142,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J6o-OB-t0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="649" y="459"/>
+            <point key="canvasLocation" x="2338" y="495"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5tL-7q-MWM">
@@ -169,18 +323,470 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zZ-Hk-ve6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1539" y="459"/>
+            <point key="canvasLocation" x="3101" y="495"/>
+        </scene>
+        <!--News List-->
+        <scene sceneID="7ZL-i4-VtY">
+            <objects>
+                <viewController storyboardIdentifier="NewsList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eva-ii-lEl" customClass="NewsList" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XBE-8O-Js2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="yuA-g0-XQr">
+                                <rect key="frame" x="20.5" y="91" width="373" height="46"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xSA-3K-MkG" customClass="NewsSearchBar" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="46"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage">
+                                                <imageReference key="value" image="magnifyingglass" catalog="system" symbolScale="medium"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yuA-g0-XQr" secondAttribute="height" multiplier="406:50" id="rz4-O4-3dP"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="kSg-TY-Xid">
+                                <rect key="frame" x="20.5" y="213.5" width="373" height="23.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-me-DBH">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SuJ-Ug-uFQ">
+                                <rect key="frame" x="20.5" y="156" width="373" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-7s-2c0" customClass="RoundedUIButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="41"/>
+                                        <color key="backgroundColor" name="GradientOne"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="kCc-Wf-uy3"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="filterImage"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openFilter:" destination="eva-ii-lEl" eventType="touchUpInside" id="Jp9-vB-CZP"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CKd-AE-yNb">
+                                        <rect key="frame" x="90" y="0.0" width="283" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i2t-Qi-r42">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9Dc-XJ-ehg">
+                                                <rect key="frame" x="0.0" y="-43.5" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bcl-pI-Gk9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EJy-vw-N39">
+                                <rect key="frame" x="20" y="249" width="374" height="593"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0b8-JM-B2I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kSg-TY-Xid" firstAttribute="width" secondItem="yuA-g0-XQr" secondAttribute="width" id="0so-Zf-71K"/>
+                            <constraint firstItem="SuJ-Ug-uFQ" firstAttribute="leading" secondItem="xSA-3K-MkG" secondAttribute="leading" id="387-bT-O3i"/>
+                            <constraint firstItem="EJy-vw-N39" firstAttribute="top" secondItem="SuJ-Ug-uFQ" secondAttribute="bottom" constant="52" id="5rr-hb-Rjh"/>
+                            <constraint firstItem="SuJ-Ug-uFQ" firstAttribute="top" secondItem="yuA-g0-XQr" secondAttribute="bottom" constant="19" id="8rB-7X-6go"/>
+                            <constraint firstItem="kSg-TY-Xid" firstAttribute="trailing" secondItem="yuA-g0-XQr" secondAttribute="trailing" id="JE3-b6-HD8"/>
+                            <constraint firstItem="kSg-TY-Xid" firstAttribute="leading" secondItem="yuA-g0-XQr" secondAttribute="leading" id="JJe-Ta-3pB"/>
+                            <constraint firstItem="yuA-g0-XQr" firstAttribute="centerX" secondItem="XBE-8O-Js2" secondAttribute="centerX" id="K0Y-Zn-0MS"/>
+                            <constraint firstItem="yuA-g0-XQr" firstAttribute="top" secondItem="0b8-JM-B2I" secondAttribute="top" constant="35" id="UiS-VI-EdE"/>
+                            <constraint firstItem="SuJ-Ug-uFQ" firstAttribute="trailing" secondItem="yuA-g0-XQr" secondAttribute="trailing" id="gw1-If-yAY"/>
+                            <constraint firstItem="EJy-vw-N39" firstAttribute="leading" secondItem="0b8-JM-B2I" secondAttribute="leading" constant="20" id="nkb-I7-Wue"/>
+                            <constraint firstItem="0b8-JM-B2I" firstAttribute="trailing" secondItem="EJy-vw-N39" secondAttribute="trailing" constant="20" id="pJm-VK-Nlf"/>
+                            <constraint firstItem="yuA-g0-XQr" firstAttribute="width" secondItem="XBE-8O-Js2" secondAttribute="width" multiplier="0.9" id="pmf-Dl-4Q6"/>
+                            <constraint firstItem="SuJ-Ug-uFQ" firstAttribute="height" secondItem="yuA-g0-XQr" secondAttribute="height" multiplier="0.9" id="qOi-yu-a5G"/>
+                            <constraint firstItem="kSg-TY-Xid" firstAttribute="top" secondItem="yuA-g0-XQr" secondAttribute="bottom" constant="76.5" id="sxQ-BY-62F"/>
+                            <constraint firstItem="EJy-vw-N39" firstAttribute="bottom" secondItem="0b8-JM-B2I" secondAttribute="bottom" id="tOv-qv-QWz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m2W-MW-C17"/>
+                    <connections>
+                        <outlet property="categoriesCollection" destination="CKd-AE-yNb" id="6QC-al-KhI"/>
+                        <outlet property="newsTableView" destination="EJy-vw-N39" id="7Ev-HR-RkP"/>
+                        <outlet property="searchBar" destination="xSA-3K-MkG" id="erN-NB-pdZ"/>
+                        <outlet property="searchResultsCount" destination="Wxa-me-DBH" id="giP-BO-gLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4T-kh-dP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="1205.3571428571429"/>
+        </scene>
+        <!--Filter Controller-->
+        <scene sceneID="mHt-NB-sI9">
+            <objects>
+                <viewController storyboardIdentifier="FilterController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uNn-Iv-qxm" customClass="FilterController" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="swi-R1-zbf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="39a-ro-UNi">
+                                <rect key="frame" x="24" y="92" width="366" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUJ-Iv-qUE">
+                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pH-7b-Lfy" customClass="BorderdButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="286" y="0.0" width="80" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title="Reset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fmz-SA-rFc">
+                                <rect key="frame" x="24" y="189" width="234" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfq-dF-2LD" customClass="BorderdButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="English"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="makeFilter:" destination="uNn-Iv-qxm" eventType="touchUpInside" id="EZO-6M-8g5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgJ-R4-He3" customClass="BorderdButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="81" y="0.0" width="68.5" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="French"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="makeFilter:" destination="uNn-Iv-qxm" eventType="touchUpInside" id="QAR-LP-m1e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILc-6R-Xxn" customClass="BorderdButton" customModule="NewsEyePax" customModuleProvider="target">
+                                        <rect key="frame" x="159.5" y="0.0" width="74.5" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Russian"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="UnSelectColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="makeFilter:" destination="uNn-Iv-qxm" eventType="touchUpInside" id="RBw-NC-CPg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort By Language" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-L6-Vtr">
+                                <rect key="frame" x="24" y="153" width="137" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort By Country" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k3-Tk-qqp">
+                                <rect key="frame" x="24" y="232.5" width="122.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCn-nt-ZJI" customClass="BorderdButton" customModule="NewsEyePax" customModuleProvider="target">
+                                <rect key="frame" x="24" y="268.5" width="43" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="US"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="UnSelectColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ih2-Xk-G3t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4k3-Tk-qqp" firstAttribute="leading" secondItem="Fmz-SA-rFc" secondAttribute="leading" id="4cd-4G-1mn"/>
+                            <constraint firstItem="HCn-nt-ZJI" firstAttribute="top" secondItem="4k3-Tk-qqp" secondAttribute="bottom" constant="12.5" id="KGa-hb-ufe"/>
+                            <constraint firstItem="39a-ro-UNi" firstAttribute="width" secondItem="swi-R1-zbf" secondAttribute="width" multiplier="0.884058" id="MGa-R7-5le"/>
+                            <constraint firstItem="Fmz-SA-rFc" firstAttribute="top" secondItem="XFH-L6-Vtr" secondAttribute="bottom" constant="12.5" id="Vvg-2d-39L"/>
+                            <constraint firstItem="39a-ro-UNi" firstAttribute="top" secondItem="ih2-Xk-G3t" secondAttribute="top" constant="48" id="WCU-6O-KJ2"/>
+                            <constraint firstItem="XFH-L6-Vtr" firstAttribute="top" secondItem="39a-ro-UNi" secondAttribute="bottom" constant="30" id="aDQ-Ut-2Z7"/>
+                            <constraint firstItem="XFH-L6-Vtr" firstAttribute="leading" secondItem="39a-ro-UNi" secondAttribute="leading" id="fWx-KU-sq9"/>
+                            <constraint firstItem="HCn-nt-ZJI" firstAttribute="leading" secondItem="4k3-Tk-qqp" secondAttribute="leading" id="oIj-eP-dqG"/>
+                            <constraint firstItem="39a-ro-UNi" firstAttribute="centerX" secondItem="swi-R1-zbf" secondAttribute="centerX" id="oUE-bo-DPF"/>
+                            <constraint firstItem="4k3-Tk-qqp" firstAttribute="top" secondItem="Fmz-SA-rFc" secondAttribute="bottom" constant="12.5" id="tnK-yC-njl"/>
+                            <constraint firstItem="Fmz-SA-rFc" firstAttribute="leading" secondItem="XFH-L6-Vtr" secondAttribute="leading" id="yn0-yN-p0W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOh-Rf-usx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="1205"/>
+        </scene>
+        <!--News Detail View-->
+        <scene sceneID="tjt-Gn-ZzQ">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fnw-jt-Fhi" customClass="NewsDetailView" customModule="NewsEyePax" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufP-UY-kQE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dZ-7S-QBD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="388"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwS-83-Gnp">
+                                <rect key="frame" x="36" y="71" width="56" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backButton">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onBackPressed:" destination="Fnw-jt-Fhi" eventType="touchUpInside" id="E7K-B8-vqC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-ij-Fwi" customClass="View" customModule="NewsEyePax" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="310" width="414" height="586"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="85I-GJ-EoJ">
+                                        <rect key="frame" x="28" y="101" width="354" height="439"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlg-2Q-8wW">
+                                        <rect key="frame" x="302" y="470" width="80" height="70"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="FloatingButton"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Qlg-2Q-8wW" secondAttribute="trailing" constant="32" id="1sc-7f-bhb"/>
+                                    <constraint firstAttribute="bottom" secondItem="85I-GJ-EoJ" secondAttribute="bottom" constant="46" id="fWY-1L-eGA"/>
+                                    <constraint firstItem="85I-GJ-EoJ" firstAttribute="top" secondItem="tOs-ij-Fwi" secondAttribute="top" constant="101" id="r52-Nt-tNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="85I-GJ-EoJ" secondAttribute="trailing" constant="32" id="rwd-2B-AvT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qlg-2Q-8wW" secondAttribute="bottom" constant="46" id="tcC-LW-uDa"/>
+                                    <constraint firstItem="85I-GJ-EoJ" firstAttribute="leading" secondItem="tOs-ij-Fwi" secondAttribute="leading" constant="28" id="u4A-3v-Uej"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSl-Jh-hIx">
+                                <rect key="frame" x="38" y="243.5" width="338" height="140"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="21A-Wr-3ZT">
+                                    <rect key="frame" x="0.0" y="0.0" width="338" height="140"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1A-JX-F3Y">
+                                            <rect key="frame" x="20" y="20" width="34" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCK-Eo-vcU">
+                                            <rect key="frame" x="20" y="47.5" width="303" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82f-k1-10P">
+                                            <rect key="frame" x="20" y="108.5" width="298" height="16.5"/>
+                                            <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="n1A-JX-F3Y" firstAttribute="leading" secondItem="21A-Wr-3ZT" secondAttribute="leading" constant="20" id="0ks-T1-Nlk"/>
+                                        <constraint firstAttribute="trailing" secondItem="LCK-Eo-vcU" secondAttribute="trailing" constant="15" id="15q-ek-gSs"/>
+                                        <constraint firstAttribute="trailing" secondItem="82f-k1-10P" secondAttribute="trailing" constant="20" id="7eY-1p-haW"/>
+                                        <constraint firstAttribute="bottom" secondItem="82f-k1-10P" secondAttribute="bottom" constant="15" id="GfT-0B-s3A"/>
+                                        <constraint firstItem="LCK-Eo-vcU" firstAttribute="leading" secondItem="n1A-JX-F3Y" secondAttribute="leading" id="I7Z-Br-oG3"/>
+                                        <constraint firstItem="82f-k1-10P" firstAttribute="leading" secondItem="21A-Wr-3ZT" secondAttribute="leading" constant="20" symbolic="YES" id="QXi-Ld-uPU"/>
+                                        <constraint firstItem="n1A-JX-F3Y" firstAttribute="top" secondItem="21A-Wr-3ZT" secondAttribute="top" constant="20" id="ZEw-2w-s31"/>
+                                        <constraint firstItem="LCK-Eo-vcU" firstAttribute="top" secondItem="n1A-JX-F3Y" secondAttribute="bottom" constant="8" symbolic="YES" id="o75-o4-2aG"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="systemUltraThinMaterialDark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zxJ-1U-wJ3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0dZ-7S-QBD" firstAttribute="trailing" secondItem="zxJ-1U-wJ3" secondAttribute="trailing" id="0vO-lc-fKy"/>
+                            <constraint firstItem="tOs-ij-Fwi" firstAttribute="height" secondItem="ufP-UY-kQE" secondAttribute="height" multiplier="0.654018" id="1ar-LS-q3G"/>
+                            <constraint firstItem="0dZ-7S-QBD" firstAttribute="height" secondItem="ufP-UY-kQE" secondAttribute="height" multiplier="0.433036" id="4ae-wz-kM4"/>
+                            <constraint firstItem="YwS-83-Gnp" firstAttribute="top" secondItem="zxJ-1U-wJ3" secondAttribute="top" constant="27" id="DPE-22-yXO"/>
+                            <constraint firstItem="DSl-Jh-hIx" firstAttribute="leading" secondItem="zxJ-1U-wJ3" secondAttribute="leading" constant="38" id="LWQ-Id-2fe"/>
+                            <constraint firstItem="0dZ-7S-QBD" firstAttribute="top" secondItem="ufP-UY-kQE" secondAttribute="top" id="QF8-1P-4ks"/>
+                            <constraint firstItem="DSl-Jh-hIx" firstAttribute="height" secondItem="ufP-UY-kQE" secondAttribute="height" multiplier="0.15625" id="U7b-eo-xRY"/>
+                            <constraint firstItem="tOs-ij-Fwi" firstAttribute="leading" secondItem="zxJ-1U-wJ3" secondAttribute="leading" id="YfE-Ga-w9I"/>
+                            <constraint firstAttribute="bottom" secondItem="tOs-ij-Fwi" secondAttribute="bottom" id="bL1-hy-Tl1"/>
+                            <constraint firstItem="YwS-83-Gnp" firstAttribute="leading" secondItem="zxJ-1U-wJ3" secondAttribute="leading" constant="36" id="fD4-iF-iAc"/>
+                            <constraint firstItem="tOs-ij-Fwi" firstAttribute="trailing" secondItem="zxJ-1U-wJ3" secondAttribute="trailing" id="hhI-6e-Evg"/>
+                            <constraint firstItem="0dZ-7S-QBD" firstAttribute="leading" secondItem="zxJ-1U-wJ3" secondAttribute="leading" id="liI-xQ-iV0"/>
+                            <constraint firstItem="DSl-Jh-hIx" firstAttribute="centerY" secondItem="ufP-UY-kQE" secondAttribute="centerY" multiplier="0.7" id="qa5-Dt-OAF"/>
+                            <constraint firstItem="zxJ-1U-wJ3" firstAttribute="trailing" secondItem="DSl-Jh-hIx" secondAttribute="trailing" constant="38" id="wif-Nr-YHx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsAuther" destination="82f-k1-10P" id="dlk-RZ-lln"/>
+                        <outlet property="newsContent" destination="85I-GJ-EoJ" id="1SM-Xn-7Pg"/>
+                        <outlet property="newsDate" destination="n1A-JX-F3Y" id="Zfz-0B-Kxf"/>
+                        <outlet property="newsImageView" destination="0dZ-7S-QBD" id="ekK-bb-OSJ"/>
+                        <outlet property="newsTitle" destination="LCK-Eo-vcU" id="LS6-cr-MD6"/>
+                        <outlet property="visualEffectView" destination="DSl-Jh-hIx" id="h8B-kr-l7l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxr-4m-lrF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="459"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZyB-aI-BVr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B4d-Gg-lo1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PUT-dy-yr0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eva-ii-lEl" kind="relationship" relationship="rootViewController" id="Xlg-EP-q2D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fh6-fq-z70" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.31884057971016" y="1205.3571428571429"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="HCn-nt-ZJI">
+            <size key="intrinsicContentSize" width="43" height="31"/>
+        </designable>
+        <designable name="ILc-6R-Xxn">
+            <size key="intrinsicContentSize" width="74.5" height="31"/>
+        </designable>
+        <designable name="Kfq-dF-2LD">
+            <size key="intrinsicContentSize" width="71" height="31"/>
+        </designable>
+        <designable name="VKX-7s-2c0">
+            <size key="intrinsicContentSize" width="71" height="30"/>
+        </designable>
+        <designable name="bgJ-R4-He3">
+            <size key="intrinsicContentSize" width="68.5" height="31"/>
+        </designable>
+        <designable name="g3V-7A-Pqf">
+            <size key="intrinsicContentSize" width="52.5" height="25"/>
+        </designable>
+        <designable name="xSA-3K-MkG">
+            <size key="intrinsicContentSize" width="52.5" height="25"/>
+        </designable>
+    </designables>
     <resources>
         <image name="FavoriteUnSelect" width="36" height="42"/>
+        <image name="FloatingButton" width="56" height="56"/>
         <image name="HomeUnSelect" width="27" height="42"/>
+        <image name="NotificationIcon" width="33" height="32"/>
         <image name="ProfileUnSelect" width="29" height="42"/>
+        <image name="arrow.forward" catalog="system" width="128" height="98"/>
+        <image name="backButton" width="32" height="32"/>
+        <image name="filterImage" width="47" height="16"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GradientOne">
+            <color red="1" green="0.22745098039215686" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GradientTwo">
             <color red="1" green="0.50196078431372548" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PrimaryColor">
-            <color red="0.92199999094009399" green="0.30199998617172241" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Secondary">
             <color red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -188,6 +794,12 @@
         <namedColor name="Tertiary">
             <color red="1" green="0.90196078431372551" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="UnSelectColor">
+            <color red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

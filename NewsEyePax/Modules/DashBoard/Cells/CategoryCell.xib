@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nunito-Regular.ttf">
+            <string>Nunito-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="gTV-IL-0wX" customClass="CategoryCell" customModule="NewsEyePax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="114" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="114" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asK-vt-hXr" customClass="CategoryView" customModule="NewsEyePax" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="114" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Im" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mba-jn-dFV">
+                                <rect key="frame" x="37" y="13" width="40.5" height="24"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mba-jn-dFV" firstAttribute="centerX" secondItem="asK-vt-hXr" secondAttribute="centerX" id="H34-Yb-76v"/>
+                            <constraint firstItem="mba-jn-dFV" firstAttribute="centerY" secondItem="asK-vt-hXr" secondAttribute="centerY" id="tTg-CJ-ZrQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="UnSelectColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="asK-vt-hXr" secondAttribute="bottom" id="0ZJ-95-es1"/>
+                <constraint firstItem="asK-vt-hXr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0kD-X5-Mbq"/>
+                <constraint firstItem="asK-vt-hXr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Jxi-c9-JZW"/>
+                <constraint firstAttribute="trailing" secondItem="asK-vt-hXr" secondAttribute="trailing" id="aBa-0n-oZa"/>
+            </constraints>
+            <size key="customSize" width="114" height="50"/>
+            <connections>
+                <outlet property="backGround" destination="asK-vt-hXr" id="ZLI-VG-SxI"/>
+                <outlet property="titleText" destination="mba-jn-dFV" id="MQE-F8-ape"/>
+            </connections>
+            <point key="canvasLocation" x="184.05797101449278" y="61.607142857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="UnSelectColor">
+            <color red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

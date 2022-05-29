@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewShimmerView" rowHeight="116" id="KGk-i7-Jjw" customClass="TableViewShimmerView" customModule="NewsEyePax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-Pw-h46">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHF-P3-vPB">
+                                <rect key="frame" x="8" y="9" width="304" height="29"/>
+                                <color key="backgroundColor" name="GradientTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="ura-Xi-eTc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5T-PX-GHr">
+                                <rect key="frame" x="8" y="79" width="98" height="29"/>
+                                <color key="backgroundColor" name="GradientTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="5go-a3-SOH"/>
+                                    <constraint firstAttribute="height" constant="29" id="afh-22-b38"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-uM-iSb">
+                                <rect key="frame" x="214" y="79" width="98" height="29"/>
+                                <color key="backgroundColor" name="GradientTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="FRX-PX-eY2"/>
+                                    <constraint firstAttribute="height" constant="29" id="vFi-4j-ag6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="UnSelectColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HHF-P3-vPB" secondAttribute="trailing" constant="8" id="3XZ-Sh-Zky"/>
+                            <constraint firstAttribute="bottom" secondItem="7VY-uM-iSb" secondAttribute="bottom" constant="8" id="3sG-IM-m3E"/>
+                            <constraint firstItem="HHF-P3-vPB" firstAttribute="top" secondItem="2qp-Pw-h46" secondAttribute="top" constant="9" id="ULD-x0-FOd"/>
+                            <constraint firstItem="HHF-P3-vPB" firstAttribute="leading" secondItem="2qp-Pw-h46" secondAttribute="leading" constant="8" id="YrV-ES-f8S"/>
+                            <constraint firstItem="x5T-PX-GHr" firstAttribute="leading" secondItem="2qp-Pw-h46" secondAttribute="leading" constant="8" id="kFQ-JC-4VO"/>
+                            <constraint firstAttribute="bottom" secondItem="x5T-PX-GHr" secondAttribute="bottom" constant="8" id="qnS-ld-pMv"/>
+                            <constraint firstAttribute="trailing" secondItem="7VY-uM-iSb" secondAttribute="trailing" constant="8" id="rZI-3a-tZf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2qp-Pw-h46" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2rA-rR-Xax"/>
+                    <constraint firstItem="2qp-Pw-h46" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5iZ-M0-H6C"/>
+                    <constraint firstAttribute="bottom" secondItem="2qp-Pw-h46" secondAttribute="bottom" id="GOi-Zw-Pmb"/>
+                    <constraint firstAttribute="trailing" secondItem="2qp-Pw-h46" secondAttribute="trailing" id="R49-Sj-zPb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="137.68115942028987" y="78.348214285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="GradientTwo">
+            <color red="1" green="0.50196078431372548" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UnSelectColor">
+            <color red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -24,7 +24,11 @@ import UIKit
         }
     }
     
-    
+    @IBInspectable var rounded: Bool = false {
+        didSet {
+            layer.cornerRadius = rounded ? frame.size.height / 2 : 0
+        }
+    }
     
     
     // MARK: - Border

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewShimmerView" id="gTV-IL-0wX" customClass="CollectionViewShimmerView" customModule="NewsEyePax" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="132"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="299" height="132"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oU9-gG-bdW">
+                        <rect key="frame" x="0.0" y="0.0" width="299" height="132"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKq-JY-6vC">
+                                <rect key="frame" x="8" y="33" width="83" height="16"/>
+                                <color key="backgroundColor" name="GradientTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="lLZ-bo-lv0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kK-fM-HxC">
+                                <rect key="frame" x="8" y="110" width="283" height="14"/>
+                                <color key="backgroundColor" name="GradientTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="LPJ-CT-Ebt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVY-fS-m85">
+                                <rect key="frame" x="8" y="54" width="283" height="24"/>
+                                <color key="backgroundColor" name="GradientTwo"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="ikq-jR-irz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="UnSelectColor"/>
+                        <constraints>
+                            <constraint firstItem="TKq-JY-6vC" firstAttribute="height" secondItem="MVY-fS-m85" secondAttribute="height" multiplier="0.666667" id="VDA-A4-Obc"/>
+                            <constraint firstItem="TKq-JY-6vC" firstAttribute="leading" secondItem="MVY-fS-m85" secondAttribute="leading" id="ZpQ-H1-URA"/>
+                            <constraint firstAttribute="trailing" secondItem="0kK-fM-HxC" secondAttribute="trailing" constant="8" id="bE7-4f-ngB"/>
+                            <constraint firstAttribute="trailing" secondItem="MVY-fS-m85" secondAttribute="trailing" constant="8" id="c8J-Fn-HD6"/>
+                            <constraint firstItem="MVY-fS-m85" firstAttribute="centerY" secondItem="oU9-gG-bdW" secondAttribute="centerY" id="de6-4V-ohZ"/>
+                            <constraint firstItem="MVY-fS-m85" firstAttribute="top" secondItem="TKq-JY-6vC" secondAttribute="bottom" constant="5" id="hNe-4Q-oJT"/>
+                            <constraint firstAttribute="bottom" secondItem="0kK-fM-HxC" secondAttribute="bottom" constant="8" id="n87-be-ZVy"/>
+                            <constraint firstItem="MVY-fS-m85" firstAttribute="leading" secondItem="oU9-gG-bdW" secondAttribute="leading" constant="8" id="pu0-Le-RyK"/>
+                            <constraint firstItem="0kK-fM-HxC" firstAttribute="leading" secondItem="oU9-gG-bdW" secondAttribute="leading" constant="8" id="vT2-Cc-VcI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oU9-gG-bdW" secondAttribute="trailing" id="GBQ-uM-6b7"/>
+                <constraint firstAttribute="bottom" secondItem="oU9-gG-bdW" secondAttribute="bottom" id="Rx6-gP-ris"/>
+                <constraint firstItem="oU9-gG-bdW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fAo-Ak-3n9"/>
+                <constraint firstItem="oU9-gG-bdW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uuk-r9-2kf"/>
+            </constraints>
+            <size key="customSize" width="299" height="132"/>
+            <point key="canvasLocation" x="305" y="60"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="GradientTwo">
+            <color red="1" green="0.50196078431372548" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UnSelectColor">
+            <color red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

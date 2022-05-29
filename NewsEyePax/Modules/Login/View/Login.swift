@@ -36,6 +36,7 @@ class Login: UIViewController {
 extension Login : AuthenticateDelegate{
     func onAuthenticateSuccess(success: Bool) {
         if success{
+            UserDefaultsHelper.shared.saveLogInflag(save: success)
             navigate()
         }else{
             NewsSnackBar.make(in: self.view, message: "Authentication Error!", duration: .lengthLong).show()
